@@ -14,8 +14,10 @@
 
 #include "file_system.h"
 
+#import <Foundation/Foundation.h>
+
 int main(int argc, const char * argv[]) {
-  mdp::ByteBuffer blueprint = haze::FileSystem::readApib("/tmp/get_user_info.apib");
+  mdp::ByteBuffer blueprint = haze::FileSystem::readApib("/Users/FrankLin/Documents/Xcode/gago/api-tips/api-tips/test_data/get_user_info.apib");
   
   drafter_result *result = nullptr;
   int success = drafter_parse_blueprint(blueprint.c_str(), &result);
@@ -30,21 +32,4 @@ int main(int argc, const char * argv[]) {
   std::cout << "Drafter JSON is : " << serialize_result << std::endl;
   
   return 0;
-}
-
-void try_snowcrash() {
-  mdp::ByteBuffer blueprint = haze::FileSystem::readApib("/tmp/get_user_info.apib");
-  
-  snowcrash::ParseResult<snowcrash::Blueprint> ast;
-  snowcrash::parse(blueprint, 0, ast);
-  
-  std::cout << "API Name: " << ast.node.description << std::endl;
-  
-  snowcrash::Elements &elements = ast.node.content.elements();
-  for (int i = 0; i < elements.size(); i++) {
-    snowcrash::Element::Category category = elements[i].category;
-    if (category == snowcrash::Element::Category::DataStructureGroupCategory) {
-      
-    }
-  }
 }

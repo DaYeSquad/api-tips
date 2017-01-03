@@ -1,16 +1,32 @@
+FORMAT: 1A
+HOST: https://api.gagogroup.com/api
+
 # Data Structures
 
-## Blog Post (object)
-+ id: 42 (number, required)
-+ text: Hello World (string)
-+ author (Author) - Author of the blog post.
+## UserInfo (object)
++ uid: 42 (number, required)
++ username: franklin (string)
++ phoneNumber: 11012345678 (string)
 
-## Author (object)
-+ name: Boba Fett
-+ email: fett@intergalactic.com
+## FarmInfo (object)
++ fmid: 001 (number, required)
++ fmName: 农场A (string, required)
 
-# Blog Posts [/posts]
+## Code (object)
++ code: 200 (number, required)
 
-## Retrieve All Posts [GET]
+## Get UserInfo Response (Code)
++ userInfo (UserInfo)
++ enterpriseName: 企业A (string)
++ farmInfos (array[FarmInfo])
++ defaultFarmName: 农场3 (string)
+
+## 获取用户信息 [/user_info]
+
+### 获取用户信息 [GET]
+根据前端传来的token获取用户信息，token放在header中
+
 + Response 200 (application/json)
-    + Attributes (array[Blog Post])
+
+    + Attributes
+      + data (Get UserInfo Response)

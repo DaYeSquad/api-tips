@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D7F2A6A1E124F01001322C6 /* main.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2A691E124F01001322C6 /* main.cc */; };
+		7D7F2A6A1E124F01001322C6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2A691E124F01001322C6 /* main.mm */; };
 		7D7F2AAC1E124F5F001322C6 /* Blueprint.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2A751E124F5F001322C6 /* Blueprint.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7D7F2AAD1E124F5F001322C6 /* BlueprintSourcemap.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2A781E124F5F001322C6 /* BlueprintSourcemap.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7D7F2AAE1E124F5F001322C6 /* HeadersParser.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2A7D1E124F5F001322C6 /* HeadersParser.cc */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -60,6 +60,7 @@
 		7D9F66C71E1354C500311A0E /* SerializeResult.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D9F66A61E1354C500311A0E /* SerializeResult.cc */; };
 		7D9F66C81E1354C500311A0E /* SerializeSourcemap.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D9F66A81E1354C500311A0E /* SerializeSourcemap.cc */; };
 		7D9F66CE1E1357B700311A0E /* sos.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7D9F66CA1E1357B700311A0E /* sos.cc */; };
+		7DA2C9E81E1B3CA300655065 /* json11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2C9E61E1B3CA300655065 /* json11.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,7 +77,7 @@
 
 /* Begin PBXFileReference section */
 		7D7F2A661E124F01001322C6 /* api-tips */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "api-tips"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D7F2A691E124F01001322C6 /* main.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cc; path = ../main.cc; sourceTree = "<group>"; };
+		7D7F2A691E124F01001322C6 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = ../main.mm; sourceTree = "<group>"; };
 		7D7F2A721E124F5F001322C6 /* ActionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionParser.h; sourceTree = "<group>"; };
 		7D7F2A731E124F5F001322C6 /* AssetParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetParser.h; sourceTree = "<group>"; };
 		7D7F2A741E124F5F001322C6 /* AttributesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributesParser.h; sourceTree = "<group>"; };
@@ -226,6 +227,8 @@
 		7D9F66CC1E1357B700311A0E /* sosJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sosJSON.h; sourceTree = "<group>"; };
 		7D9F66CD1E1357B700311A0E /* sosYAML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sosYAML.h; sourceTree = "<group>"; };
 		7D9F66D01E135B9400311A0E /* cmdline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmdline.h; sourceTree = "<group>"; };
+		7DA2C9E61E1B3CA300655065 /* json11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json11.cpp; sourceTree = "<group>"; };
+		7DA2C9E71E1B3CA300655065 /* json11.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json11.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +272,7 @@
 		7D7F2A701E124F5F001322C6 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7DA2C9E51E1B3CA300655065 /* json11 */,
 				7D9F66CF1E135B9400311A0E /* cmdline */,
 				7D9F66C91E1357B700311A0E /* sos */,
 				7D9F66661E1354C500311A0E /* drafter */,
@@ -393,7 +397,7 @@
 			children = (
 				7D7F2ADE1E1264FB001322C6 /* base */,
 				7D7F2ADA1E12645D001322C6 /* fs */,
-				7D7F2A691E124F01001322C6 /* main.cc */,
+				7D7F2A691E124F01001322C6 /* main.mm */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -516,6 +520,15 @@
 			path = cmdline;
 			sourceTree = "<group>";
 		};
+		7DA2C9E51E1B3CA300655065 /* json11 */ = {
+			isa = PBXGroup;
+			children = (
+				7DA2C9E61E1B3CA300655065 /* json11.cpp */,
+				7DA2C9E71E1B3CA300655065 /* json11.hpp */,
+			);
+			path = json11;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -595,6 +608,7 @@
 				7D9F66C21E1354C500311A0E /* RefractSourceMap.cc in Sources */,
 				7D7F2AB61E124F5F001322C6 /* Section.cc in Sources */,
 				7D7F2AD21E125B11001322C6 /* autolink.c in Sources */,
+				7DA2C9E81E1B3CA300655065 /* json11.cpp in Sources */,
 				7D9F66C11E1354C500311A0E /* RefractElementFactory.cc in Sources */,
 				7D7F2AD31E125B11001322C6 /* buffer.c in Sources */,
 				7D7F2AAD1E124F5F001322C6 /* BlueprintSourcemap.cc in Sources */,
@@ -612,7 +626,7 @@
 				7D7F2AC31E1251A0001322C6 /* ByteBuffer.cc in Sources */,
 				7D7F2AD51E125B11001322C6 /* src_map.c in Sources */,
 				7D9F66BF1E1354C500311A0E /* RefractAPI.cc in Sources */,
-				7D7F2A6A1E124F01001322C6 /* main.cc in Sources */,
+				7D7F2A6A1E124F01001322C6 /* main.mm in Sources */,
 				7D9F66AC1E1354C500311A0E /* config.cc in Sources */,
 				7D9F66C61E1354C500311A0E /* SerializeAST.cc in Sources */,
 				7D9F66BD1E1354C500311A0E /* TypeQueryVisitor.cc in Sources */,
@@ -723,6 +737,7 @@
 		7D7F2A6E1E124F01001322C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = RXCU56Z755;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -731,6 +746,7 @@
 		7D7F2A6F1E124F01001322C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = RXCU56Z755;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

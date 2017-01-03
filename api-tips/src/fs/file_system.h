@@ -17,9 +17,28 @@
 
 NS_HAZE_BEGIN
 
+/**
+ File system wraps Objective-C methods.
+ */
 class FileSystem {
 public:
+  
+  /**
+   Read *.apib (blueprint) file as string.
+
+   @param path Absolute path.
+   @return File content.
+   */
   static mdp::ByteBuffer readApib(const std::string& path);
+  
+  
+  /**
+   Write string to file.
+
+   @param content Content.
+   @param path Absolute path.
+   @return true if success.
+   */
   static bool writeToFile(const std::string& content, const std::string& path);
   
 private:

@@ -12,6 +12,9 @@
 
 NS_HAZE_BEGIN
 
+////////////////////////////////////////////////////////////////////////////////
+// FileSystem, public:
+
 mdp::ByteBuffer FileSystem::readApib(const std::string& path) {
   NSString *objc_file_path = [NSString stringWithUTF8String:path.c_str()];
   NSError *error;
