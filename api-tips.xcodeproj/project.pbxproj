@@ -151,7 +151,6 @@
 		7D7F2ACF1E125B11001322C6 /* src_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = src_map.h; sourceTree = "<group>"; };
 		7D7F2AD01E125B11001322C6 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		7D7F2AD11E125B11001322C6 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
-		7D7F2AD81E1263F9001322C6 /* get_user_info.apib */ = {isa = PBXFileReference; lastKnownFileType = text; path = get_user_info.apib; sourceTree = "<group>"; };
 		7D7F2ADB1E126471001322C6 /* file_system.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = file_system.mm; sourceTree = "<group>"; };
 		7D7F2ADC1E126471001322C6 /* file_system.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_system.h; sourceTree = "<group>"; };
 		7D7F2ADF1E12650A001322C6 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
@@ -262,7 +261,6 @@
 		7D7F2A681E124F01001322C6 /* api-tips */ = {
 			isa = PBXGroup;
 			children = (
-				7D7F2AD71E126389001322C6 /* test_data */,
 				7D7F2A701E124F5F001322C6 /* vendor */,
 				7D7F2AD91E126441001322C6 /* src */,
 			);
@@ -382,14 +380,6 @@
 				7D7F2AD11E125B11001322C6 /* stack.h */,
 			);
 			path = sundown;
-			sourceTree = "<group>";
-		};
-		7D7F2AD71E126389001322C6 /* test_data */ = {
-			isa = PBXGroup;
-			children = (
-				7D7F2AD81E1263F9001322C6 /* get_user_info.apib */,
-			);
-			path = test_data;
 			sourceTree = "<group>";
 		};
 		7D7F2AD91E126441001322C6 /* src */ = {

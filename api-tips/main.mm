@@ -17,7 +17,7 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-  mdp::ByteBuffer blueprint = haze::FileSystem::readApib("/Users/FrankLin/Documents/Xcode/gago/api-tips/api-tips/test_data/get_user_info.apib");
+  mdp::ByteBuffer blueprint = haze::FileSystem::readApib("/Users/FrankLin/Documents/Xcode/gago/api-tips/api-tips/test_data/user.apib");
   
   drafter_result *result = nullptr;
   int success = drafter_parse_blueprint(blueprint.c_str(), &result);

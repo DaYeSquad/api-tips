@@ -1,5 +1,12 @@
-FORMAT: 1A
-HOST: https://api.gagogroup.com/api
+## 获取用户信息 [/user_info]
+
+### 获取用户信息 [GET]
+获取用户的信息
+
++ Response 200 (application/json)
+
+    + Attributes
+      + data (Get user info Response)
 
 # Data Structures
 
@@ -15,18 +22,8 @@ HOST: https://api.gagogroup.com/api
 ## Code (object)
 + code: 200 (number, required)
 
-## Get UserInfo Response (Code)
+## Get user info Response (Code)
 + userInfo (UserInfo)
 + enterpriseName: 企业A (string)
 + farmInfos (array[FarmInfo])
 + defaultFarmName: 农场3 (string)
-
-## 获取用户信息 [/user_info]
-
-### 获取用户信息 [GET]
-根据前端传来的token获取用户信息，token放在header中
-
-+ Response 200 (application/json)
-
-    + Attributes
-      + data (Get UserInfo Response)
